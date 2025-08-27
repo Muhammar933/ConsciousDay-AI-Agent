@@ -4,14 +4,10 @@ import datetime
 import sys
 from pathlib import Path
 
-from db.database import init_db, save_entry, get_entry_by_date
-from agent.reflection_agent import generate_reflection
-
 # --- Add project root to path for imports ---
 ROOT = Path(__file__).resolve().parent
+sys.path.append(str(ROOT))
 
-
-# --- Import DB functions and AI agent ---
 from db.database import init_db, save_entry, get_entry_by_date
 from agent.reflection_agent import generate_reflection
 
